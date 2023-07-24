@@ -43,12 +43,12 @@ public class ExampleModClient implements ClientModInitializer {
 				}else if(PlaPos >= 3000 && PlaPos <= 3999) {
 					map = "Medieval";
 					mapCh = 1;
-				}else {
-					map = "";
-					mapCh = 0;
 				}
 				System.out.println(map);
-            }
+            }else {
+				map = "";
+				mapCh = 0;
+			}
         });
 		
 	}
