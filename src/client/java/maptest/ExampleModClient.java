@@ -31,17 +31,20 @@ public class ExampleModClient implements ClientModInitializer {
 
 		ClientReceiveMessageEvents.GAME.register((mess, over)->{message = mess.getString();
             if (message.contains ("Game Started!")){ 
-				if (PlaPos >= 0 && PlaPos <= 999) {
-					map = "Classic";
+				if (PlaPos >= 0 && PlaPos <= 499) {
+					map = "Map: Classic";
 					mapCh = 1;
-				} else if (PlaPos >= 1000 && PlaPos <= 1999){
-					map = "Beach";
+				} else if (PlaPos >= 500 && PlaPos <= 999){
+					map = "Map: bowl";
+					mapCh = 1;
+				}else if (PlaPos >= 1000 && PlaPos <= 1999){
+					map = "Map: Beach";
 					mapCh = 1;
 				}else if(PlaPos >= 2000 && PlaPos <= 2999) {
-					map = "Highrise";
+					map = "Map: Highrise";
 					mapCh = 1;
 				}else if(PlaPos >= 3000 && PlaPos <= 3999) {
-					map = "Medieval";
+					map = "Map: Medieval";
 					mapCh = 1;
 				}
 				System.out.println(map);
